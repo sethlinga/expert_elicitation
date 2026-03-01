@@ -51,3 +51,5 @@ rsconnect/
 figures/
 
 .DS_Store
+
+expert_elicitation.Rproj
