@@ -51,3 +51,5 @@ rsconnect/
 figures/
 
 data/
+
+.DS_Store
