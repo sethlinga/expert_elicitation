@@ -66,11 +66,11 @@ model_colors <- c(
 
 # Colors for each criteria #################################################
 criteria_colors <- c(
-    "limitations"     = "#EF476F",
-    "plausibility"    = "#FFD166",
-    "choice\nspace"   = "#06D6A0",
-    "peer\nagreement" = "#118AB2",
-    "influence"       = "#073B4C")
+    "limitations"     = "#F3C6C6",
+    "plausibility"    = "#9FB7A5",
+    "choice\nspace"   = "#7FA0C8",
+    "peer\nagreement" = "#E6C56E",
+    "influence"       = "#3A3A36")
 
 # Setup theme ##################################################################
 theme_SNL <- theme_bw() +
@@ -1016,3 +1016,9 @@ ggsave("figures/4_diagnostic_diagram.png",
 diagnostic_diagram
 
 ```
+
+# System information
+```{r}
+sessionInfo()
+```
+
