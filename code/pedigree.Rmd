@@ -23,6 +23,7 @@ library(gridExtra)
 library(grid)
 library(networkD3)
 library(htmlwidgets)
+library(RColorBrewer)
 library(ggrepel)
 library(data.table)
 library(ggtext)
@@ -63,14 +64,6 @@ model_colors <- c(
   "MPI-HM" = "#E4B074",
   "WaterGAP" = "#D08C60",
   "VIC" = "#997B66")
-
-# Colors for each criteria #################################################
-criteria_colors <- c(
-    "limitations"     = "#F3C6C6",
-    "plausibility"    = "#9FB7A5",
-    "choice\nspace"   = "#7FA0C8",
-    "peer\nagreement" = "#E6C56E",
-    "influence"       = "#3A3A36")
 
 # Setup theme ##################################################################
 theme_SNL <- theme_bw() +
@@ -549,7 +542,7 @@ ped_scores <- ggplot(ped_summary, aes(x = criterion, y = mean,
 
   # Scales
   scale_y_continuous(limits = c(0, 3.2), breaks = 0:3) +
-  scale_color_manual(values = criteria_colors) +
+  scale_color_manual(values = brewer.pal(n = 5, name = "Set1")) +
   scale_shape_manual(name = "", values = c("Scientists" = 16, "Irrigators" = 17)) +
   scale_linetype_manual(name = "", values = c("Scientists" = "solid", "Irrigators" = "11")) +
 
