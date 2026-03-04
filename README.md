@@ -14,7 +14,7 @@ Here you can find the code and datasets needed to replicate our work. Contact Se
 
 ### Code
 * pedigree.Rmd : code in Rstudio
-*pedigree.pdf : compiled code in PDF
+* pedigree.pdf : compiled code in PDF
 
 ### Data
 * studies.csv : modelling literature where assumptions were extracted
