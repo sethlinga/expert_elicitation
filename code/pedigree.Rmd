@@ -23,7 +23,7 @@ library(gridExtra)
 library(grid)
 library(networkD3)
 library(htmlwidgets)
-library(RColorBrewer)
+library(paletteer)
 library(ggrepel)
 library(data.table)
 library(ggtext)
@@ -38,7 +38,7 @@ library(sensobol)
 
 setwd("~/Library/CloudStorage/OneDrive-UniversityofBirmingham/dawn/expert_elicitation/expert_elicitation")
 
-score <- read_excel("data/workshop_data.xlsx", sheet = "model_assumptions")
+score <- read_excel("data/workshop_data.xlsx", sheet = "ranking")
 pedigree <- read_excel("data/workshop_data.xlsx", sheet = "pedigree_mod")
 pedigree_comb <- read_excel("data/workshop_data.xlsx", sheet = "pedigree_comb")
 ```
@@ -542,7 +542,7 @@ ped_scores <- ggplot(ped_summary, aes(x = criterion, y = mean,
 
   # Scales
   scale_y_continuous(limits = c(0, 3.2), breaks = 0:3) +
-  scale_color_manual(values = brewer.pal(n = 5, name = "Set1")) +
+  scale_color_manual(values = paletteer_d("fishualize::Scarus_tricolor")) +
   scale_shape_manual(name = "", values = c("Scientists" = 16, "Irrigators" = 17)) +
   scale_linetype_manual(name = "", values = c("Scientists" = "solid", "Irrigators" = "11")) +
 
